@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namore comigo?</title>
+    
+
+    
+</head>
+<style>
+    :root {
+    background-image: url(https://lampadariodivinopolis.com.br/wp-content/uploads/2016/06/declaracao-de-amor-na-lampadario.jpg);
+    background-size: 27%;
+}
+
+    #conteudo {
+        padding-top: 10px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    #texto{
+        color: rgb(255, 1, 128);
+        padding-top: 250px;
+    }
+
+    .btn {
+        background: black;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100px;
+        border-radius: 8px;
+    }
+
+</style>
+<body>
+    <div id="conteudo">
+        
+        <h1 id="texto">Aceita namorar comigo?</h1>
+        <div>
+            <button class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="nao(this)" onmouseover="nao(this)" style="position: absolute;">NÃO</button>
+        </div>
+    </div>
+</body>
+<script>
+    function sim() {
+            alert("Você aceitou namorar comigo! :)");
+            location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+        }
+
+        function nao(btn) {
+        
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+
+
+</script>
+</html>
